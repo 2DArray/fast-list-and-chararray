@@ -9,7 +9,7 @@ public static class ArrayExtensions {
 	/// <param name="array"></param>
 	/// <typeparam name="T"></typeparam>
 	/// <returns></returns>
-    public static T RandomItem<T>(this T[] array) {
+	public static T RandomItem<T>(this T[] array) {
 		return array[Random.Range(0,array.Length)];
 	}
 
