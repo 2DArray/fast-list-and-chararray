@@ -3,4 +3,4 @@
   
   A `CharArray` inherits from `FastList<char>`, and is specifically intended to be used with TextMeshPro.  TMPro allows you to set the text content of a textbox by providing a `char[]` and a count - CharArray can provide it with these things, and it gives you some handy `Append()` functions for appending text, integers, or float values.
   
-  Generally, you should be able to feel out the usage of `FastList` and `CharArray` by checking the hints in their autocomplete-popups.
+  Generally, you should be able to feel out the usage of `FastList` and `CharArray` by checking the hints in their autocomplete-popups.  They're very simple, so it should be pretty easy to add your own extra features to them, as well.  Let me know if you add cool stuff that seems like it'd be useful to other folks!
