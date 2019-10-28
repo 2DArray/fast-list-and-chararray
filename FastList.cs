@@ -126,10 +126,10 @@ public class FastList<T> {
 	}
 
 	/// <summary>
-	/// Clears the list and removes the references that it contained (up to the previous "length" value). To clear all references in the list, including those outside of the active range, use HardClear().
+	/// Clears the list and removes the references that it contained (up to the previous "count" value). To clear all references in the list, including those outside of the active range, use HardClear().
 	/// </summary>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public void HardClearLength() {
+	public void HardClearCount() {
 		for (int i=0; i<count; i++) {
 			array[i] = default;
 		}
@@ -140,7 +140,7 @@ public class FastList<T> {
 	/// Clears the list and removes all references that the array contained, even if they were outside of the active range.
 	/// </summary>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public void HardClear() {
+	public void HardClearAll() {
 		for (int i=0; i<array.Length; i++) {
 			array[i] = default;
 		}

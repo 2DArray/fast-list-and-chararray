@@ -48,7 +48,7 @@ public class CharArray : FastList<char> {
 	/// </summary>
 	/// <param name="text">The string to append.</param>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void Append(string text) {
+	public void Append(string text) {
 		for (int i=0; i<text.Length; i++) {
 			Add(text[i]);
 		}
@@ -176,7 +176,7 @@ public class CharArray : FastList<char> {
 
 public static class TMProCharArrayExtension {
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void SetText(this TMP_Text textMeshPro, CharArray charArray) {
+	public static void SetText(this TMP_Text textMeshPro, CharArray charArray) {
 		textMeshPro.SetCharArray(charArray.GetArray(), 0, charArray.count);
 	}
 }
