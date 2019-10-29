@@ -161,12 +161,42 @@ public class FastList<T> {
 	/// <summary>
 	/// Get a reference to the FastList's internal array.
 	/// </summary>
-	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public T[] GetArray() {
 		return array;
 	}
+	
+	/// <summary>
+	/// Shuffles the FastList into a random order.
+	/// </summary>
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public void Shuffle () {
+		int j;
+		T tmp;
+		for(int i = count - 1; i > 0; i--){
+			j = UnityEngine.Random.Range(0, i+1);
+			tmp = array[i];
+			array[i] = array[j];
+			array[j] = tmp;
+		}
+	}
 
+	/// <summary>
+	/// Returns the first item in the FastList: this[0]
+	/// </summary>
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public T First () {
+		return this[0];
+	}
+
+	/// <summary>
+	/// Returns the final item in the FastList: this[count-1]
+	/// </summary>
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public T Last () {
+		return this[count - 1];
+	}
+	
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	void DoubleCapacity() {
 		int newLength = count*2;
